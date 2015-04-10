@@ -1,7 +1,7 @@
 \section{Analysis}
 The training session was used to illustrate the low, middle and high \ac{SoP} levels in order to guide subjects to bound their own perceived overall ratings more or less similarly.
 To ensure that the ratings do not deviate significantly from others, the detection and elimination of outliers was performed.
-The assessed \ac{IL} is the factor in which subjects were trained, thus the outliers detection was based on the scale of the perceived overall quality ratings. The outliers detection was applied according to the guidelines described in Section 2.3.1 of Annex 2 of [TO SET]. In this study, no outliers were detected.
+The assessed \ac{IL} is the factor in which subjects were trained, thus the outliers detection was based on the scale of the perceived overall quality ratings. The outliers detection was applied according to the guidelines described in Section 2.3.1 of Annex 2 of \cite{Outliers}. In this study, no outliers were detected.
 
 \subsection{Subjective ratings analysis}
 
@@ -65,8 +65,36 @@ The correlation coefficient of \ac{IL} and video quality is 0.99, meaning that t
 
 The table \ref{OC} confirms the high correlation between \ac{IL} and the video quality (cc = 0.99), and shows the influence to having sound or not (cc = 0.97). It also valid that the surrounding awareness is inversely related with the \ac{IL} (cc ~= -0.99).
 
+
 \subsection{Physiological signal analysis}
+This section presents the pre-processing steps to remove the artifacts, the feature extraction methods and the classification results.
 
 \subsubsection{Pre-processing}
+The manually rejection of muscle activity related \ac{EEG} electrodes leads to a total of 216 electrodes for processing and analysis. \ac{EEG} signals were filtered between 3-47 Hz using a third-order Butterworth filter, in order to remove \ac{EOG}and \ac{EMG} artifacts.
+[TO SET : DENOISING FUNCTION]
 
-\subsubsection{Correlation}
+\ac{ECG} signals were used to extract the \ac{HRV}, which reflects the sympathetic/parasympathetic modulation. \ac{HRV} is the physiological measurement of variation in the time interval between consecutive hearts beats.\\
+In order to extract the \ac{HRV}, the interval between two QRS complexes defined as R-R interval ($t_{R-R}$)was estimated using the real-time algorithm developed by Pan and Tompkins \cite{HR}. Then the heart rate (HR, in beats per minute) was estimated as :
+\begin{equation}
+	HR = \frac{60}{t_{R-R}}
+\end{equation}
+
+The \ac{HRV} is the variation of HR over time. As the HR is a time-series of non-uniform R-R intervals, the HR was regularly resampled at 4 Hz rate.
+[TO SET : respiration denoising]
+
+Both respiratory signals (abdomen and thoracic) were filtered by a wavelet multivariate de-noising
+\cite{waveletDenoise}.
+It combines univariate wavelet de-noising in the basis where the estimated noise covariance matrix is diagonal and non-centered Principal Component Analysis (PCA) on approximations in the wavelet domain.
+
+In the presented results, only 19 \ac{EEG} signals were kept to expedite the validation of the database.
+
+
+\subsubsection{Feature extraction}
+[He?]
+\subsubsection{Classification}
+[He?]
+
+\subsubsection{Results}
+[Me]
+
+
