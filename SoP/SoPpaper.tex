@@ -48,12 +48,15 @@
 \documentclass{sig-alternate}
 \usepackage{acronym}
 \usepackage{array}
+\usepackage{caption}
 
 \begin{document}
 
 % acronym definitions
 \newacro{SoP}{Sense of Presence}
 \newacro{QoE}{Quality of experience}
+\newacroplural{QoE}{Quality of experiences}
+
 \newacro{QoS}{Quality of service}
 \newacro{EEG}{electroencephalography}
 \newacro{ECG}{electrocardiography}
@@ -61,6 +64,7 @@
 \newacro{MOS}{Mean opinion scores}
 \newacro{CI}{Confidence intervals}
 \newacro{IL}{immersiveness level}
+\newacroplural{IL}{immersiveness levels}
 \newacro{EOG}{electrooculogram}
 \newacro{EMG}{electromyogram}
 \newacro{HRV}{heart rate variability}
@@ -69,11 +73,11 @@
 %
 % --- Author Metadata here ---
 \conferenceinfo{ACM MM}{2015 , Brisbane, Australia}
-%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\CopyrightYear{2015} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{Sense of Presence Multimodal Dataset}
+\title{Immersive Multimodal Dataset using physiological signals}
 %\subtitle{[Extended Abstract]
 %\titlenote{A full version of this paper is available as
 %\textit{Author's Guide to Preparing ACM SIG Proceedings Using
@@ -90,9 +94,8 @@
 %\alignauthor 
 Anne-Flore Perrin, He Xu, Eleni Kroupi, Martin Rerabek, Touradj Ebrahimi \\
        \affaddr{Multimedia Signal Processing Group (MMSPG)}\\
-       \affaddr{Ecole Polytechnique Federale de Lausanne (EPFL)}\\
-       \affaddr{EPFL/STI/IEL/GR-EB, Station 11, CH-1015 Lausanne, Switzerland}\\
-       \email{\{anne-flore.perrin, he.xu, eleni.kroupi, martin.rerabek, touradj.ebrahimi\}@epfl.ch}
+       \affaddr{Ecole Polytechnique Federale de Lausanne (EPFL), Switzerland}\\
+       \email{\normalsize \{name.surname\}@epfl.ch}
 %% 1st. author
 %\alignauthor Anne-Flore Perrin \\
 %       \affaddr{Multimedia Signal Processing Group (MMSPG)}\\
@@ -144,9 +147,9 @@ Anne-Flore Perrin, He Xu, Eleni Kroupi, Martin Rerabek, Touradj Ebrahimi \\
 
 \maketitle
 \begin{abstract}
-Measuring the quality of a set of videos with various properties, as the content, quality, resolution and sound system, is not an easy task because of the subjectivity of the human perception. A way to express the quality of a video is to assess the \ac{QoE}, especially the \ac{SoP}. 
-The latter, not so explored, is the principle we would like to assess. To be independent of the human way to express the feelings and experiences, the measure is built thanks to biological signals ( \ac{EEG}, \ac{ECG} and respiration).
-\\The aim pursued is the creation of a data set containing all the biological signals enabling the SoP study. An illustration demonstrates this data set is well constructed and functional for the assessment of the sense of presence.
+Measuring the perceived sense of immersion of a set of videos with respect to content, quality, resolution and sound system, is not an easy task because of the subjectivity of the human perception. A way to express the overall perceived quality of a video is to assess the \ac{QoE}, especially the \ac{SoP}. 
+The latter, not so explored, is the principle we would like to assess. To be independent of the human way to explicitly express feelings and experiences, the analysis is carried out using physiological signals such as \ac{EEG}, \ac{ECG} and respiration.
+\\The aim pursued is the creation of a data set containing all the above-mentioned signals in order to study the \ac{SoP}. The analysis demonstrates that data set is well constructed and functional for the assessment of the \ac{SoP}.
 
 \end{abstract}
 
